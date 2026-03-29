@@ -1,7 +1,9 @@
-1.DOT_main(matlab)
-2.DOT_func(matlab)
-3.Sinkhorn_Compute(matlab)
-4.DOT_NAS101_api(matlab)
-5.DOT_NAS101_NASBench(matlab)
+1. 1.DOT_main(matlab)
+1. 2.DOT_func(matlab)
 
+2. 1.Sinkhorn_Compute(matlab)
+2. 2.DOT_NAS101_api(matlab)
+2. 3.DOT_NAS101_NASBench(matlab)
 
+3. 1.Mask_DOT_main(python)
+3. 2.DOT_searh(python)
