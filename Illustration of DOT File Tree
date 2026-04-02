@@ -1,9 +1,14 @@
+0. 1.Sinkhorn_Compute(matlab)
+
 1. 1.DOT_main(matlab)
 1. 2.DOT_func(matlab)
+1. 3.CEC2017_benchmark(matlab)
 
-2. 1.Sinkhorn_Compute(matlab)
-2. 2.DOT_NAS101_api(matlab)
-2. 3.DOT_NAS101_NASBench(matlab)
+2. 1.DOT_NAS101_api(matlab)
+2. 2.DOT_NAS101_NASBench(matlab)
+2. 3.NAS_benchmark(python)
 
 3. 1.Mask_DOT_main(python)
 3. 2.DOT_searh(python)
+3. 3.Maltab_bridge(python)
+3. 4.VLSI_benchmark(python)
