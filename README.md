@@ -13,9 +13,9 @@ This repository provides the official implementation of **DOT**, a distributiona
 
 The codebase contains three open-policy implementations:
 
-- **DOT-Open-Policy**: MATLAB implementation for continuous optimization on CEC2017 benchmark functions.
+- **DOT-Open-Policy**: MATLAB implementation for continuous optimization on CEC2017 functions.
 - **DOT-NAS-Open-Policy**: MATLAB/Python implementation for NASBench-101 neural architecture search.
-- **DOT-WireMask-Open-Policy**: Python implementation for VLSI macro placement on ISPD2005 benchmarks.
+- **DOT-WireMask-Open-Policy**: Python implementation for VLSI macro placement on ISPD2005.
 
 ---
 
