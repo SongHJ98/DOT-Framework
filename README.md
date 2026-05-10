@@ -1,25 +1,31 @@
-# DOT-Framework: Principled distributional framework for evolutionary optimization via optimal transport
+# 🌐 DOT-Framework: Principled Distributional Framework for Evolutionary Optimization via Optimal Transport
+
+![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B-orange)
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows%2064--bit-lightgrey)
+![License](https://img.shields.io/badge/License-Check%20Third--Party%20Notices-yellow)
 
 ---
- 
+
 ## 🚀 Download and Install
 
-Download DOT-NAS-Open-Policy： https://drive.google.com/file/d/1fuAAtXmRo9brYivCDiFQa_cNZvIBte1R/view?usp=drive_link
+📦 **Download DOT-NAS-Open-Policy**:  
+https://drive.google.com/file/d/1fuAAtXmRo9brYivCDiFQa_cNZvIBte1R/view?usp=drive_link
 
-Download DOT-WireMask-Open-Policy：https://drive.google.com/file/d/1f-7N3JYic4TNkR7VZtAKor1-hXGsZXkE/view?usp=drive_link
-
+📦 **Download DOT-WireMask-Open-Policy**:  
+https://drive.google.com/file/d/1f-7N3JYic4TNkR7VZtAKor1-hXGsZXkE/view?usp=drive_link
 
 This repository provides the official implementation of **DOT**, a distributional optimization framework based on optimal transport.
 
 The codebase contains three open-policy implementations:
 
-- **DOT-Open-Policy**: MATLAB implementation for continuous optimization on CEC2017 functions.
-- **DOT-NAS-Open-Policy**: MATLAB/Python implementation for NASBench-101 neural architecture search.
-- **DOT-WireMask-Open-Policy**: Python implementation for VLSI macro placement on ISPD2005.
+- 🔹 **DOT-Open-Policy**: MATLAB implementation for continuous optimization on CEC2017 functions.
+- 🔹 **DOT-NAS-Open-Policy**: MATLAB/Python implementation for NASBench-101 neural architecture search.
+- 🔹 **DOT-WireMask-Open-Policy**: Python implementation for VLSI macro placement on ISPD2005.
 
 ---
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 .
@@ -57,7 +63,7 @@ The codebase contains three open-policy implementations:
 
 ---
 
-## System Requirements
+## 🧩 System Requirements
 
 The current implementation is mainly tested under a Windows 64-bit environment.
 
@@ -70,7 +76,7 @@ The current implementation is mainly tested under a Windows 64-bit environment.
 | MATLAB toolbox | Statistics and Machine Learning Toolbox recommended |
 | GPU | Not required for the main DOT macro-placement entrypoint |
 
-Notes:
+### 📝 Notes
 
 - `DOT-Open-Policy` includes a Windows MATLAB MEX file: `cec17_func.mexw64`.
 - For non-Windows systems, compile `cec17_func.cpp` locally.
@@ -79,9 +85,9 @@ Notes:
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-### 1. DOT-Open-Policy
+### 🔸 1. DOT-Open-Policy
 
 On Windows, the included MEX file can be used directly.
 
@@ -98,7 +104,7 @@ mex cec17_func.cpp
 
 ---
 
-### 2. DOT-NAS-Open-Policy
+### 🔸 2. DOT-NAS-Open-Policy
 
 Run the following commands from `DOT-NAS-Open-Policy`.
 
@@ -131,7 +137,7 @@ nb = NASBenchDaemon( ...
 
 ---
 
-### 3. DOT-WireMask-Open-Policy
+### 🔸 3. DOT-WireMask-Open-Policy
 
 Run the following commands from `DOT-WireMask-Open-Policy`.
 
@@ -165,38 +171,39 @@ python ispd2005.py
 
 ---
 
-## Quick Start
+## 🏃 Quick Start
 
-### CEC2017 Continuous Optimization
+### 📌 CEC2017 Continuous Optimization
 
 ```bash
 cd DOT-Open-Policy
 matlab -batch "OpTr_by_SinkHorn"
 ```
 
-### NASBench-101 Daemon Test
+### 📌 NASBench-101 Daemon Test
 
 ```bash
 cd DOT-NAS-Open-Policy
 matlab -batch "speed_demo"
 ```
 
-### NASBench-101 DOT Search
+### 📌 NASBench-101 DOT Search
 
 ```bash
 cd DOT-NAS-Open-Policy
 matlab -batch "OpTr_by_SinkHorn"
 ```
 
-### WireMask DOT Macro Placement
+### 📌 WireMask DOT Macro Placement
 
 ```bash
 cd DOT-WireMask-Open-Policy
 python DOT.py --dataset adaptec3 --seed 2025 --init_round 30 --stop_round 171
 ```
+
 ---
 
-## DOT-Open-Policy: CEC2017 Optimization
+## 🔬 DOT-Open-Policy: CEC2017 Optimization
 
 `DOT-Open-Policy` runs DOT on CEC2017 continuous benchmark functions.
 
@@ -235,7 +242,7 @@ For a short test, set `runtimes = 1` and restrict the function set in `OpTr_by_S
 
 ---
 
-## DOT-NAS-Open-Policy: NASBench-101 Search
+## 🧠 DOT-NAS-Open-Policy: NASBench-101 Search
 
 Run environment test:
 
@@ -260,7 +267,7 @@ Test_Figures/*.fig
 
 ---
 
-## DOT-WireMask-Open-Policy: VLSI Macro Placement
+## 🏗️ DOT-WireMask-Open-Policy: VLSI Macro Placement
 
 | Dataset | grid_num | grid_size |
 |---|---:|---:|
@@ -303,19 +310,18 @@ result/BO/
 
 ---
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
-- If MATLAB cannot find `cec17_func`, run from `DOT-Open-Policy` or compile `cec17_func.cpp`.
-- If `xlswrite` fails, replace it with `writematrix`, `writecell`, or `writetable`.
-- If `NASBenchDaemon` cannot find Python, pass `PythonPath` explicitly.
-- If `NASBenchDaemon` cannot find the dataset, pass `DatasetPath` explicitly.
-- If TensorFlow installation fails, use Python 3.7 with TensorFlow 1.15.0.
-- If `BO.py` fails on CPU-only machines, change `device="cuda"` to `device="cpu"`.
+- ⚠️ If MATLAB cannot find `cec17_func`, run from `DOT-Open-Policy` or compile `cec17_func.cpp`.
+- ⚠️ If `xlswrite` fails, replace it with `writematrix`, `writecell`, or `writetable`.
+- ⚠️ If `NASBenchDaemon` cannot find Python, pass `PythonPath` explicitly.
+- ⚠️ If `NASBenchDaemon` cannot find the dataset, pass `DatasetPath` explicitly.
+- ⚠️ If TensorFlow installation fails, use Python 3.7 with TensorFlow 1.15.0.
+- ⚠️ If `BO.py` fails on CPU-only machines, change `device="cuda"` to `device="cpu"`.
 
 ---
 
-
-## License
+## 📄 License
 
 Please check and retain all third-party license notices before redistribution.
 
