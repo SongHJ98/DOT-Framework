@@ -237,10 +237,6 @@ For a short test, set `runtimes = 1` and restrict the function set in `OpTr_by_S
 
 ## DOT-NAS-Open-Policy: NASBench-101 Search
 
-`DOT-NAS-Open-Policy` evaluates DOT on NASBench-101. DOT searches over 26-dimensional architecture encodings and evaluates candidates through a persistent Python NASBench daemon.
-
-The manuscript reports **state-of-the-art NASBench-101 performance**, with **94.42% best test accuracy** and **94.25% average test accuracy** under a **1,000-evaluation budget**.
-
 Run environment test:
 
 ```bash
