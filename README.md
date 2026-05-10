@@ -322,9 +322,8 @@ Please check and retain all third-party license notices before redistribution.
 Known license notes:
 
 - `DOT-NAS-Open-Policy` includes NASBench code under the Apache License 2.0.
-- `DOT-WireMask-Open-Policy` includes an MIT License file from the WireMask-BBO codebase.
+- `DOT-WireMask-Open-Policy` currently has no local license file in the provided project description.
 - `DOT-Open-Policy` currently has no local license file in the provided project description.
 
-A repository-level license is recommended before public release.
 
 ---
