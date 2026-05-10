@@ -251,18 +251,6 @@ cd DOT-NAS-Open-Policy
 matlab -batch "OpTr_by_SinkHorn"
 ```
 
-Default settings include:
-
-```matlab
-dim = 26;
-Max_FES = 1000;
-runtimes = 30;
-Threshold = 400;
-skip = 150;
-SH_max_runs = 50;
-lam = 0.0015;
-```
-
 Typical outputs:
 
 ```text
@@ -273,12 +261,6 @@ Test_Figures/*.fig
 ---
 
 ## DOT-WireMask-Open-Policy: VLSI Macro Placement
-
-`DOT-WireMask-Open-Policy` applies DOT to macro placement on ISPD2005-style benchmarks.
-
-The manuscript reports **state-of-the-art macro-placement results** on several ISPD2005 circuits.
-
-Supported benchmarks:
 
 | Dataset | grid_num | grid_size |
 |---|---:|---:|
@@ -318,89 +300,6 @@ result/DOT/placement/<dataset>_seed_<seed>.csv
 result/Random/
 result/BO/
 ```
-
----
-
-## MATLAB Bridge for WireMask
-
-`DOT-WireMask-Open-Policy` provides a MATLAB bridge for evaluating macro-placement solutions through the Python WireMask evaluator.
-
-Example setup:
-
-```matlab
-projectRoot = 'C:/path/to/DOT-WireMask-Open-Policy';
-
-addpath(fullfile(projectRoot, 'matlab'));
-
-pyenv('Version', fullfile(projectRoot, '.venv/Scripts/python.exe'));
-
-bridge = wiremask.Bridge( ...
-    'adaptec1', ...
-    'CoordinateMode', 'grid', ...
-    'ProjectRoot', projectRoot ...
-);
-```
-
-Each MATLAB individual is a row vector of length:
-
-```text
-3 * macro_count
-```
-
-with the format:
-
-```text
-[macro_id_1, x_1, y_1, macro_id_2, x_2, y_2, ...]
-```
-
-Minimal evaluation example:
-
-```matlab
-macroIds = bridge.macroIds(:)';
-M = bridge.macroCount;
-
-coordsX = mod(0:M-1, bridge.gridNum);
-coordsY = floor((0:M-1) / bridge.gridNum);
-coordsY = min(coordsY, bridge.gridNum - 1);
-
-individual = reshape([macroIds; coordsX; coordsY], 1, []);
-population = repmat(individual, 2, 1);
-
-initScores = bridge.evaluateGreedy(population);
-childScores = bridge.evaluateHpwl(population);
-```
-
----
-
-## Reproducibility Notes
-
-For CEC2017 experiments, report:
-
-- dimension
-- function set
-- `Particle_number`
-- `Max_iteration`
-- `lam`
-- `ThreShold`
-- `Skip`
-- number of repeated runs
-
-For NASBench-101 experiments, report:
-
-- evaluation budget
-- random seed
-- architecture encoding setting
-- NASBench dataset path
-- best and average test accuracy
-
-For macro-placement experiments, report:
-
-- dataset
-- seed
-- `init_round`
-- `stop_round`
-- HPWL trace
-- final placement file
 
 ---
 
