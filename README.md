@@ -1,4 +1,4 @@
-# Principled distributional framework for evolutionary optimization via optimal transport
+# DOT-Framework: Principled distributional framework for evolutionary optimization via optimal transport
 
 ---
  
@@ -8,8 +8,6 @@ Download DOT-NAS-Open-Policy： https://drive.google.com/file/d/1fuAAtXmRo9brYiv
 
 Download DOT-WireMask-Open-Policy：https://drive.google.com/file/d/1f-7N3JYic4TNkR7VZtAKor1-hXGsZXkE/view?usp=drive_link
 
-
-# DOT-Framework: Distributional Optimization via Optimal Transport
 
 This repository provides the official implementation of **DOT**, a distributional optimization framework based on optimal transport.
 
