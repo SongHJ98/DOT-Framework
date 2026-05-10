@@ -163,12 +163,6 @@ bigblue3
 bigblue4
 ```
 
-If benchmark data is missing, use:
-
-```bash
-python ispd2005.py
-```
-
 ---
 
 ## 🏃 Quick Start
