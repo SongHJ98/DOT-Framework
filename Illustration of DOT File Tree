@@ -1,4 +1,4 @@
-  The repository contains three related implementations of a distributional optimal transport (DOT) search strategy. 
+  The repository contains three related implementations of the distributional optimal transport (DOT) search strategy. 
 1.DOT-Open-Policy: MATLAB implementation for continuous CEC2017 benchmark optimization.
 2.DOT-NAS-Open-Policy: MATLAB DOT search adapted to NASBench-101 neural architecture search, with a persistent Python NASBench daemon.
 3.DOT-WireMask-Open-Policy: Python implementation for ISPD2005 macro placement, with random search, Bayesian optimization, DOT search, and a MATLAB bridge.
