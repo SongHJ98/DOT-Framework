@@ -24,7 +24,44 @@ The codebase contains three open-policy implementations:
 - 🔹 **DOT-WireMask-Open-Policy**: Python implementation for VLSI macro placement on ISPD2005.
 
 ---
+---
+## 📁 Repository Structure
 
+```text
+.
+|-- Principled_distributional_framework_for_evolutionary_optimization_via_optimal_transport.pdf
+|-- DOT-Open-Policy/
+|   |-- OpTr_by_SinkHorn.m
+|   |-- DisOT_ProbMeasure.m
+|   |-- Sinkhorn_OTcomputing.m
+|   |-- cec17_func.cpp
+|   |-- cec17_func.mexw64
+|   |-- input_data/
+|   `-- Test_Figures/
+|-- DOT-NAS-Open-Policy/
+|   |-- OpTr_by_SinkHorn.m
+|   |-- DisOT_ProbMeasure.m
+|   |-- NASBenchDaemon.m
+|   |-- nasbench_daemon.py
+|   |-- data/
+|   |   `-- nasbench_only108.tfrecord
+|   `-- README.md
+`-- DOT-WireMask-Open-Policy/
+    |-- DOT.py
+    |-- RS.py
+    |-- BO.py
+    |-- optimal_transport_search.py
+    |-- place_db.py
+    |-- utils.py
+    |-- common.py
+    |-- benchmark/
+    |-- result/
+    `-- matlab/
+        `-- +wiremask/
+            `-- Bridge.m
+```
+
+---
 ## 🧩 System Requirements
 
 The current implementation is mainly tested under a Windows 64-bit environment.
@@ -264,44 +301,7 @@ result/Random/
 result/BO/
 ```
 
----
-## 📁 Repository Structure
 
-```text
-.
-|-- Principled_distributional_framework_for_evolutionary_optimization_via_optimal_transport.pdf
-|-- DOT-Open-Policy/
-|   |-- OpTr_by_SinkHorn.m
-|   |-- DisOT_ProbMeasure.m
-|   |-- Sinkhorn_OTcomputing.m
-|   |-- cec17_func.cpp
-|   |-- cec17_func.mexw64
-|   |-- input_data/
-|   `-- Test_Figures/
-|-- DOT-NAS-Open-Policy/
-|   |-- OpTr_by_SinkHorn.m
-|   |-- DisOT_ProbMeasure.m
-|   |-- NASBenchDaemon.m
-|   |-- nasbench_daemon.py
-|   |-- data/
-|   |   `-- nasbench_only108.tfrecord
-|   `-- README.md
-`-- DOT-WireMask-Open-Policy/
-    |-- DOT.py
-    |-- RS.py
-    |-- BO.py
-    |-- optimal_transport_search.py
-    |-- place_db.py
-    |-- utils.py
-    |-- common.py
-    |-- benchmark/
-    |-- result/
-    `-- matlab/
-        `-- +wiremask/
-            `-- Bridge.m
-```
-
----
 ## 🛠️ Troubleshooting
 
 - ⚠️ If MATLAB cannot find `cec17_func`, run from `DOT-Open-Policy` or compile `cec17_func.cpp`.
