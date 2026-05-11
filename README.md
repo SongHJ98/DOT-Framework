@@ -118,12 +118,6 @@ uv pip install "protobuf==3.20.3"
 uv pip install -e .
 ```
 
-The default MATLAB daemon paths are:
-
-```text
-.venv/Scripts/python.exe
-data/nasbench_only108.tfrecord
-```
 
 They can be changed when constructing `NASBenchDaemon`:
 
@@ -140,13 +134,9 @@ nb = NASBenchDaemon( ...
 
 Run the following commands from `DOT-WireMask-Open-Policy`.
 
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-pip install -e TuRBO
+```
+python ispd2005.py
+mv ispd2005 benchmark
 ```
 
 The benchmark directory should contain ISPD2005 circuits such as:
